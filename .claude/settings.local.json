@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tree:*)",
+      "Bash(python3:*)",
+      "Bash(chmod:*)",
+      "Bash(sudo apt-mark hold v4l2loopback-dkms)",
+      "Read(//dev/input/**)",
+      "Read(//dev/input/by-id/**)",
+      "Bash(find /home/ihpc/code/ai-drone/legacy -name \"*.py\" -exec grep -l \"joystick.*button\\|button.*record\\|SH\\|SA\\|SB\" {} ;)",
+      "Bash(kill 34025)",
+      "Bash(lsof -i :30001)",
+      "Bash(kill -9 39787)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -1,0 +1,37 @@
+# AI Drone Training Configuration Example
+#
+# Usage:
+#   python -m train.train --config configs/train_example.yaml
+
+# Model Configuration
+model: toge                    # Options: toge, resnet_unet, fpv_diffusion
+horizon: 4                     # Action sequence horizon
+pretrained: true               # Use pretrained backbone
+
+# Dataset Configuration
+dataset_root: ./record/lerobot_datasets/liftoff_drone_dataset
+img_size: 224                  # Input image size (square)
+batch_size: 32                 # Batch size (adjust based on GPU memory)
+num_workers: 4                 # DataLoader workers
+val_split: 0.1                 # Validation split ratio (0.1 = 10%)
+augment: true                  # Enable data augmentation
+
+# Training Configuration
+epochs: 100                    # Number of training epochs
+lr: 0.0001                     # Learning rate (1e-4)
+weight_decay: 0.00001          # Weight decay (1e-5)
+grad_clip: 1.0                 # Gradient clipping value
+scheduler: cosine              # Options: cosine, step, none
+
+# System Configuration
+device: cuda                   # Options: cuda, cpu
+amp: true                      # Use automatic mixed precision
+seed: 42                       # Random seed for reproducibility
+
+# Output Configuration
+output_dir: outputs            # Output directory for checkpoints and logs
+print_freq: 50                 # Print training stats every N batches
+save_freq: 10                  # Save checkpoint every N epochs
+
+# Resume Training (optional)
+# resume: outputs/toge_20250101_120000/checkpoints/checkpoint_epoch_0050.pt

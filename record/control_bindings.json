@@ -1,0 +1,43 @@
+{
+  "version": "1.0",
+  "created_at": "2025-10-20 19:28:59",
+  "bindings": {
+    "flight_controls": {
+      "throttle": {
+        "axis": "ABS_Z",
+        "min": 4,
+        "max": 2031
+      },
+      "yaw": {
+        "axis": "ABS_RX",
+        "min": 4,
+        "max": 2047
+      },
+      "pitch": {
+        "axis": "ABS_Y",
+        "min": 3,
+        "max": 2044
+      },
+      "roll": {
+        "axis": "ABS_X",
+        "min": 3,
+        "max": 2043
+      }
+    },
+    "recording_controls": {
+      "start_recording": {
+        "axis": "ABS_RUDDER",
+        "value": 2047
+      },
+      "stop_recording": {
+        "axis": "ABS_RY",
+        "value": 2047
+      },
+      "emergency_stop": {
+        "axis": "BTN_SOUTH",
+        "value": 1
+      }
+    },
+    "liftoff_controls": {}
+  }
+}
